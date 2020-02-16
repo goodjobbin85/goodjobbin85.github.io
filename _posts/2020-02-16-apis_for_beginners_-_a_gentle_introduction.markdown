@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "API'S FOR BEGINNERS - A Gentle Introduction "
-date:       2020-02-16 16:49:01 +0000
+date:       2020-02-16 11:49:02 -0500
 permalink:  apis_for_beginners_-_a_gentle_introduction
 ---
 
@@ -18,33 +18,40 @@ The documentation for the IEX API for Ruby can be found at https://github.com/db
 
 1. Install Ruby.  Install Ruby using your favorite package manager. I used RVM as I wanted to control the Ruby versions that my system had.  For this particular tutorial, I used Ruby version 2.6.1 
 2. Create Gemfile.  Create a Gemfile in your program and require the iex gem by typing 
+
      ```
 		 gem 'iex-ruby-client' 
 		 ``` 
+		 
 3. Run 
+
      ``` 
 		 bundle install 
-		 ``` 
+		 ```  
+		 
 	   for your terminal to install iex on your local system 
-4.  Get Token.  Go to https://iexcloud.io/ and sign up for an account to get your free token.  This token will give you      access to the data and will allow your code to retrieve stock information.  
+4.  Get Token.  Go to "https://iexcloud.io/ " and sign up for an account to get your free token.  This token will give you      access to the data and will allow your code to retrieve stock information.  
 5.  Include code snippet in your application. 
+
 ```
      client = IEX::Api::Client.new(
-  publishable_token: 'token',
-  endpoint: 'https://sandbox.iexapis.com/v1'
-) 
-
+     publishable_token: 'token',
+     endpoint: 'https://sandbox.iexapis.com/v1'
+    ) 
+```
 
 This code snippet will allow you to instantiate a new client, store it in the client variable, and get the data.  Now we can do things like 
+
 ``` 
    quote = client.quote('MSFT')
-```
-quote.latest_price # 90.165
-quote.change # 0.375
-quote.change_percent # 0.00418
-quote.change_percent_s # '+0.42%' 
 
-The above code is an example from the ruby iex documentation found at https://github.com/dblock/iex-ruby-client.
+   quote.latest_price # 90.165
+   quote.change # 0.375
+   quote.change_percent # 0.00418
+   quote.change_percent_s # '+0.42%' 
+``` 
+
+The above code is an example from the ruby iex documentation found at "https://github.com/dblock/iex-ruby-client".
 
 And that's it! We've connected to an API and were able to retrieve data from it.  There is so much more involved than this, but I hope that I was able to show that working with APIs should not be as intimidating as it seems. 
 
