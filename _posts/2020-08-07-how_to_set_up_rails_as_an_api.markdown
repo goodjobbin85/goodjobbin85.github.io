@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "How to Set Up Rails As An API"
-date:       2020-08-08 00:26:45 +0000
+date:       2020-08-07 20:26:46 -0400
 permalink:  how_to_set_up_rails_as_an_api
 ---
 
@@ -19,7 +19,9 @@ This will notify Rails that this will be used as an API only.  Now, we can creat
 
 In the User.rb file: 
 
-   ``has_many: accounts`` 
+   ``
+	 has_many: accounts
+	 `` 
 
 And in the Account.rb file: 
 
