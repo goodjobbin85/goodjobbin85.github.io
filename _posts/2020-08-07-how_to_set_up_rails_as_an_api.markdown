@@ -12,16 +12,13 @@ In this article, we will discuss how to set up Ruby on Rails to be used strictly
 
 This will notify Rails that this will be used as an API only.  Now, we can create a few resources to play with. 
 
-   ```
-	rails g scaffold user name email
-  rails  g scaffold account number balance user:references
-	```
+   ``rails g scaffold user name email``
+	 
+   ``rails  g scaffold account number balance user:references``
 
 In the User.rb file: 
 
-   ``
-	 has_many: accounts
-	 `` 
+   ``has_many: accounts`` 
 
 And in the Account.rb file: 
 
